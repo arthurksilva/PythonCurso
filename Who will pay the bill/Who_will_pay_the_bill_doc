@@ -1,0 +1,27 @@
+Este código é um programa simples que solicita ao usuário a quantidade de pessoas (ou "peploe") e depois pergunta se o usuário deseja continuar ou não. Com base na resposta do usuário, ele decide se continua solicitando mais pessoas ou se encerra. No final, ele escolhe aleatoriamente uma pessoa da lista e a imprime como a pessoa que pagará a conta.
+
+Aqui está uma descrição passo a passo do código:
+
+1. O programa começa importando os módulos `random` e `os`.
+
+2. Em seguida, define uma função chamada `check_exit(option)` que recebe um argumento `option`. Esta função verifica se `option` é igual a '0' ou '1'. Se for '0', retorna '0'; se for '1', retorna '1'; caso contrário, exibe uma mensagem de erro e solicita novamente a entrada do usuário até que uma resposta válida seja fornecida.
+
+3. Em seguida, o programa define uma lista vazia chamada `list_peploe`, inicializa as variáveis `counter` e `qtd` com zero.
+
+4. Entra em um loop `while` com a condição `counter == 0`. Este loop continuará a ser executado até que `counter` seja definido como 1.
+
+5. No loop, o programa solicita ao usuário a quantidade de pessoas (ou "peploe") e armazena essa entrada na lista `list_peploe`. Em seguida, pergunta se o usuário deseja continuar (digitando '1') ou não (digitando '0'). Ele chama a função `check_exit(option)` para validar a entrada do usuário e atualiza o valor da variável `option` com o retorno da função.
+
+6. Se o usuário digitar '0', o programa define `counter` como 1, encerrando o loop `while`.
+
+7. O programa calcula o número de pessoas na lista `list_peploe` usando `len(list_peploe)` e armazena o resultado em `amount_peploe`.
+
+8. Ele gera um número aleatório entre 0 e `amount_peploe - 1` usando `random.randint(0, amount_peploe - 1)` e armazena o resultado em `random_peplo`.
+
+9. O programa limpa a tela do console (no Windows) usando `os.system("cls")` para melhorar a apresentação.
+
+10. Em seguida, entra em um loop `for` que itera sobre a lista `list_peploe` e imprime cada pessoa na lista.
+
+11. Por fim, o programa imprime uma mensagem informando quem pagará a conta, escolhendo aleatoriamente uma pessoa da lista `list_peploe` com base no índice gerado aleatoriamente em `random_peplo`.
+
+Resumidamente, o código coleta nomes de pessoas em uma lista, permite ao usuário decidir se deseja continuar adicionando nomes e, em seguida, escolhe aleatoriamente uma pessoa da lista para pagar a conta.
